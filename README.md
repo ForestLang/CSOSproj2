@@ -14,6 +14,3 @@ The repository should contain:
 
 you should only have to compile the file with the main in it to run the program.   
 (g++ -o runner main.cpp    ./runner)
-
-things have not been added yet, because don't yet exist in a way I am happy with, but they will and when they are this readme should be updated.
-
