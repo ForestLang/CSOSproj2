@@ -21,5 +21,29 @@ int main() {
 		}
 		cout << "\n";
 	}
-	
+	// create an array for the safe order to be saved in
+	int safe[n];
+	int pnum = 0; // a int for keeping track of which process is being looked at
+	int numMisses = 0; // int for making sure I maybe don't get stuck in an endless loop
+	// start loop for entering things into safe[]
+	for(int s = 0; s < n; s++) {
+		bool safeP = false;
+		//start loop that ckecks if it is safe to allocate the resources to process pnum
+			// if it is safe, safeP = true
+			// else: do nothing
+		if(safeP)
+			safe[s] = pnum;
+		else {
+			s--;
+			numMisses++;
+		}
+		if(numMisses == n) {
+			if(s == 0) {
+				cout << "cannot find safe sequence with provided variables";
+				s == n+3; //exits loop
+			}
+			else
+				s--;
+		}
+	}
 }
